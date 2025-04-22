@@ -1,0 +1,177 @@
+{
+    "updatedAt": "2023-05-02T13:21:09.683Z",
+    "createdAt": "2023-05-02T13:21:09.683Z",
+    "name": "account_associations",
+    "label": "account_associations",
+    "type": "enumeration",
+    "fieldType": "checkbox",
+    "description": "Drip Report - account_associations (parent associations)",
+    "groupName": "companyinformation",
+    "options": [
+        {
+            "label": "",
+            "value": "",
+            "displayOrder": 0,
+            "hidden": false
+        },
+        {
+            "label": "ACCA",
+            "value": "1",
+            "displayOrder": 1,
+            "hidden": false
+        },
+        {
+            "label": "ADA",
+            "value": "2",
+            "displayOrder": 2,
+            "hidden": false
+        },
+        {
+            "label": "Bryant FAD",
+            "value": "3",
+            "displayOrder": 3,
+            "hidden": false
+        },
+        {
+            "label": "Bryant Locator",
+            "value": "4",
+            "displayOrder": 4,
+            "hidden": false
+        },
+        {
+            "label": "Carrier FAD",
+            "value": "5",
+            "displayOrder": 5,
+            "hidden": false
+        },
+        {
+            "label": "Carrier Locator",
+            "value": "6",
+            "displayOrder": 6,
+            "hidden": false
+        },
+        {
+            "label": "NCI Member Rewards",
+            "value": "7",
+            "displayOrder": 7,
+            "hidden": false
+        },
+        {
+            "label": "Nexstar",
+            "value": "8",
+            "displayOrder": 8,
+            "hidden": false
+        },
+        {
+            "label": "SAI / BDR (Business Development Resources)",
+            "value": "9",
+            "displayOrder": 9,
+            "hidden": false
+        },
+        {
+            "label": "Mitsubishi",
+            "value": "10",
+            "displayOrder": 10,
+            "hidden": false
+        },
+        {
+            "label": "ServiceMaster Clean",
+            "value": "11",
+            "displayOrder": 11,
+            "hidden": false
+        },
+        {
+            "label": "ARS/Rescue Rooter Network",
+            "value": "12",
+            "displayOrder": 12,
+            "hidden": false
+        },
+        {
+            "label": "Service Roundtable",
+            "value": "13",
+            "displayOrder": 13,
+            "hidden": false
+        },
+        {
+            "label": "Coolfront",
+            "value": "14",
+            "displayOrder": 14,
+            "hidden": false
+        },
+        {
+            "label": "CCE Dealer (Johnson Controls brands)",
+            "value": "16",
+            "displayOrder": 15,
+            "hidden": false
+        },
+        {
+            "label": "CertainPath (SGI)",
+            "value": "21",
+            "displayOrder": 16,
+            "hidden": false
+        },
+        {
+            "label": "50% Special Discount",
+            "value": "22",
+            "displayOrder": 17,
+            "hidden": false
+        },
+        {
+            "label": "20% Special Discount",
+            "value": "23",
+            "displayOrder": 18,
+            "hidden": false
+        },
+        {
+            "label": "40% Special Discount",
+            "value": "24",
+            "displayOrder": 19,
+            "hidden": false
+        },
+        {
+            "label": "30% Special Discount",
+            "value": "25",
+            "displayOrder": 20,
+            "hidden": false
+        },
+        {
+            "label": "SBE (Service Business Excellence)",
+            "value": "26",
+            "displayOrder": 21,
+            "hidden": false
+        },
+        {
+            "label": "10% Special Discount",
+            "value": "27",
+            "displayOrder": 22,
+            "hidden": false
+        },
+        {
+            "label": "Derek's Test",
+            "value": "28",
+            "displayOrder": 23,
+            "hidden": false
+        },
+        {
+            "label": "ICP Elite Dealer",
+            "value": "29",
+            "displayOrder": 24,
+            "hidden": false
+        }
+    ],
+    "createdUserId": "50646205",
+    "updatedUserId": "50646205",
+    "displayOrder": -1,
+    "calculated": false,
+    "externalOptions": false,
+    "archived": false,
+    "hasUniqueValue": false,
+    "hidden": false,
+    "showCurrencySymbol": false,
+    "modificationMetadata": {
+        "archivable": true,
+        "readOnlyDefinition": false,
+        "readOnlyValue": false
+    },
+    "formField": true
+}

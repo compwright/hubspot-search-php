@@ -1,0 +1,10 @@
+{
+    "query": "foo",
+    "filterGroups": [
+        {"filters":[{"propertyName":"hs_object_id","operator": "EQ","value":"foo"}]},
+        {"filters":[{"propertyName":"hs_object_id","operator": "EQ","value":"bar"}]}
+    ],
+    "limit": 50,
+    "after": 0,
+    "properties": ["foo","bar","baz"]
+}

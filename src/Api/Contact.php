@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Compwright\HubspotSearchPhp\Api;
+
+use Compwright\EasyApi\ApiClient;
+use Compwright\EasyApi\Operation;
+use Compwright\EasyApi\OperationBody\JsonBody;
+use Compwright\EasyApi\Result\Json\IterableResult;
+use Compwright\EasyApi\Result\Json\Result;
+use Compwright\HubspotSearchPhp\RequestBody\SearchRequestBody;
+use Compwright\HubspotSearchPhp\PaginatedIterableResult;
+use Compwright\HubspotSearchPhp\Model\PropertyCollection;
+
+class Contact
+{
+    public function __construct(private ApiClient $client)
+    {
+    }
+
+    /**
+     * @see https://www.shipstation.com/docs/api/orders/add-tag/
+     */
+    public function search(SearchRequestBody $body): Result
+    {
+        $op = Operation::fromSpec('POST /crm/v3/objects/contact/search')
+            ->setBody(new JsonBody($body));
+        return $this->client->__invoke($op, new PaginatedIterableResult('results'));
+    }
+
+    public function listProperties(): PropertyCollection
+    {
+        $op = Operation::fromSpec('GET /crm/v3/properties/contact');
+        $result = $this->client->__invoke($op, new IterableResult('results'));
+        return PropertyCollection::newFromArray(iterator_to_array($result));
+    }
+}

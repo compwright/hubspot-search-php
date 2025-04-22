@@ -1,0 +1,6 @@
+POST /crm/v3/objects/contact/search HTTP/1.1
+Host: api.hubspot.com
+User-Agent: GuzzleHttp/7
+Authorization: Bearer foo
+
+{"query":"bar","limit":50,"after":0}

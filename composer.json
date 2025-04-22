@@ -1,0 +1,43 @@
+{
+    "name": "compwright/hubspot-search-php",
+    "description": "Hubspot Search API v3 Client for modern PHP",
+    "keywords": [
+        "psr-7",
+        "guzzle"
+    ],
+    "homepage": "https://github.com/compwright/hubspot-search-php",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "compwright/easy-api": "^1.1",
+        "compwright/should-retry": "^1.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.72",
+        "helmich/phpunit-psr7-assert": "dev-master",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^10.5"
+    },
+    "authors": [
+        {
+            "name": "Jonathon Hill",
+            "email": "jonathon@compwright.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Compwright\\HubspotSearchPhp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Compwright\\HubspotSearchPhp\\": "tests/"
+        }
+    }
+}
