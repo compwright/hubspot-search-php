@@ -8,7 +8,6 @@ use Compwright\EasyApi\ApiClient;
 use Compwright\EasyApi\Operation;
 use Compwright\EasyApi\OperationBody\JsonBody;
 use Compwright\EasyApi\Result\Json\IterableResult;
-use Compwright\EasyApi\Result\Json\Result;
 use Compwright\HubspotSearchPhp\RequestBody\SearchRequestBody;
 use Compwright\HubspotSearchPhp\PaginatedIterableResult;
 use Compwright\HubspotSearchPhp\Model\PropertyCollection;
@@ -22,7 +21,7 @@ class Contact
     /**
      * @see https://www.shipstation.com/docs/api/orders/add-tag/
      */
-    public function search(SearchRequestBody $body): Result
+    public function search(SearchRequestBody $body): PaginatedIterableResult
     {
         $op = Operation::fromSpec('POST /crm/v3/objects/contact/search')
             ->setBody(new JsonBody($body));
