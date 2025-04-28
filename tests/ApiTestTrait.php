@@ -8,21 +8,18 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Message;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Utils;
-use Helmich\Psr7Assert\Psr7Assertions;
 use InvalidArgumentException;
+use PHPUnit\Framework\Attributes\After;
+use PHPUnit\Framework\Attributes\Before;
 use Psr\Http\Message\RequestInterface;
 
 trait ApiTestTrait
 {
-    use Psr7Assertions;
-
     protected MockHandler $rootHandler;
 
     protected HubspotSearchApi $api;
 
-    /**
-     * @before
-     */
+    #[Before]
     protected function setupMockApi(): void
     {
         $this->rootHandler = new MockHandler();
@@ -30,9 +27,7 @@ trait ApiTestTrait
         $this->api = $factory->new('foo');
     }
 
-    /**
-     * @after
-     */
+    #[After]
     protected function resetMockApi(): void
     {
         $this->rootHandler->reset();
@@ -82,10 +77,10 @@ trait ApiTestTrait
     protected function assertRequestMatchesExpected(RequestInterface $expectedRequest, $request): void
     {
         $this->assertInstanceOf(get_class($expectedRequest), $request);
-        $this->assertRequestHasMethod($request, $expectedRequest->getMethod());
-        $this->assertRequestHasUri($request, (string) $expectedRequest->getUri());
-        $this->assertMessageHasHeader($request, 'Authorization', 'Bearer foo');
-        $this->assertMessageHasHeader($request, 'User-Agent', 'GuzzleHttp/7');
+        $this->assertEquals($expectedRequest->getMethod(), $request->getMethod());
+        $this->assertEquals((string) $expectedRequest->getUri(), (string) $request->getUri());
+        $this->assertEquals('Bearer foo', $request->getHeaderLine('Authorization'));
+        $this->assertEquals('GuzzleHttp/7', $request->getHeaderLine('User-Agent'));
         $this->assertSame((string) $expectedRequest->getBody(), (string) $request->getBody());
     }
 }
