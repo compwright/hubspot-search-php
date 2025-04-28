@@ -10,20 +10,14 @@ class SearchRequestBodyTest extends TestCase
 {
     public function testCreateJsonSerialize(): void
     {
-        $expected = json_decode(
-            file_get_contents(__DIR__ . '/SearchRequestBody.json') ?: '',
-            true,
-            512,
-            JSON_THROW_ON_ERROR | JSON_BIGINT_AS_STRING
-        );
+        $json = file_get_contents(__DIR__ . '/SearchRequestBody.json') ?: '';
 
         $actual = SearchRequestBody::create([
             'query' => 'foo',
             'properties' => ['foo', 'bar', 'baz']
         ])
-            ->setIdFilters(['foo', 'bar'])
-            ->jsonSerialize();
+            ->setIdFilters(['foo', 'bar']);
 
-        $this->assertEquals($expected, $actual);
+        $this->assertSame($json, json_encode($actual));
     }
 }
