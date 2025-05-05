@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/compwright/hubspot-search-php/compare/v1.0.2...v1.1.0) (2025-05-05)
+
+
+### Features
+
+* expose underlying API client instance ([ccf6001](https://github.com/compwright/hubspot-search-php/commit/ccf600189bac5c7265b7c4ca814a64f79207c36d))
+
 ## [1.0.2](https://github.com/compwright/hubspot-search-php/compare/v1.0.1...v1.0.2) (2025-04-28)
 
 
