@@ -11,9 +11,14 @@ class HubspotSearchApi
     public readonly Api\Company $company;
     public readonly Api\Contact $contact;
 
-    public function __construct(ApiClient $client)
+    public function __construct(private ApiClient $client)
     {
         $this->company = new Api\Company($client);
         $this->contact = new Api\Contact($client);
+    }
+
+    public function getApiClient(): ApiClient
+    {
+        return $this->client;
     }
 }
